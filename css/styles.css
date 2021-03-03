@@ -1,0 +1,7 @@
+body{
+    margin:0px;
+    padding: opx;
+    background-image: url(../images/image.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
