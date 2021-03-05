@@ -40,7 +40,7 @@
  ---
 
  ## Here's a link to my deployed or live page
-https://natasha1594.github.io/Pizza-order/
+https://natasha1594.github.io/360-slice-pizza-place/
 
 ---
 
