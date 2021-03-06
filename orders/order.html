@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>360 Slice Pizza Place- Amazing pizza's!</title>
+    <link rel="stylesheet" href="css/mdb.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/wickedcss.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="../assets/images/icon.png">
+
+
+</head>
+
+<body>
+
+    <header>
+        <div class="view landing">
+            <div id="overlay">
+                <nav class="navbar navbar-expand-sm  navbar-dark fixed-top" style="background-color: crimson;">
+                    <a class="navbar-brand" href="../index.html"><img src="../assets/images/pizza1.jpg" alt="" width="100px"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+                    <div class="collapse navbar-collapse align-items-center" id="collapsibleNavbar">
+                        <h3 style="color: white">Order Form</h3>
+                    </div>
+                </nav>
+                <div class="container-fluid order" id="make-order">
+                    <div class="order-overlay">
+                        <div class="controls-top text-center" id="Order-now">
+                            <h2 style="color: crimson;">Order Here</h2>
+                        </div>
+                        <h2>Order your pizza here and we will deliver it to you at your door step!</h2>
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <form action="">
+                                    <label for="select">Select Your Flavor</label>
+                                    <select class="browser-default custom-select custom-select-md mb-3 name">
+                  <!-- <option selected value="choose">Choose your flavor</option> -->
+                  <option value="Chicken Tikka">Chicken-Tikka-Pizza</option>
+                  <option value="PeriPeri Pizza">Chicken-Pizza</option>
+                  <option value="Raspberry Dessert Pizza">Hawaian-Pizza</option>
+                  <option value="Chicken Alfredo Pizza">Sausage-Pizza</option>
+                  <option value="Sunchoke Pizza">Bbq-Chicken-Pizza</option>
+                  <option value="Buffalo Chicken Sticks">Veggie-Spinach-Pizza</option>
+                </select>
+                                    <label for="select">Select Size</label>
+                                    <select class="browser-default custom-select custom-select-md mb-3" id="size">
+                <option selected value="0">Select size here</option>
+                <option value="large">Large -- sh. 1200</option>
+                <option value="medium">Medium -- sh. 850</option>
+                <option value="small">Small -- sh. 600</option>
+              </select>
+                                    <label for="crust">Choose your favorite Crust!</label>
+                                    <select class="browser-default custom-select custom-select-md mb-3" id="crust">
+                    <option selected value="0">Select your preferred crust!</option>
+                  <option value="Crispy">Crispy -- sh. 200</option>
+                  <option value="Stuffed">Stuffed -- sh. 150</option>
+                  <option value="Gluten-free">Gluten-free-- sh. 180</option>
+                </select>
+                                    <label for="Toppings">Select Your Toppings at sh. 50 each</label><br>
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                        <input type="checkbox" class="custom-control-input" id="Sausage" value="Sausage" name="toppings">
+                                        <label class="custom-control-label" for="Sausage">Sausage</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                        <input type="checkbox" class="custom-control-input" id="Bacon" value="Bacon" name="toppings">
+                                        <label class="custom-control-label" for="Bacon">Bacon</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                        <input type="checkbox" class="custom-control-input" id="Mushrooms" value="Mushrooms" name="toppings">
+                                        <label class="custom-control-label" for="Mushrooms">Mushrooms</label>
+                                    </div>
+                                    <br><br>
+                                    <button type="submit" class="btn btn-orange proceed">Proceed</button>
+
+                                </form>
+                            </div>
+                            <div class="col-sm-7">
+                                <div id="information">
+
+                                </div>
+                                <div class="choice">
+                                    <h2>Your Order is:</h2>
+                                    <div id="your-orders">
+                                        <table class="table table-sm  pizzatable">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Name</th>
+                                                    <th scope="col">Size</th>
+                                                    <th scope="col">Crust</th>
+                                                    <th scope="col">Topping</th>
+                                                    <th scope="col">Total</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="ordersmade">
+                                                <tr>
+                                                    <td id="pizzaname"></td>
+                                                    <td id="pizzasize"></td>
+                                                    <td id="pizzacrust"></td>
+                                                    <td id="pizzatopping"></td>
+                                                    <td id="totals"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <p id="pizzatotal"></p>
+                                        <p id="totalbill"></p>
+                                        <p id="addedprice">Delivery cost is sh. 150</p>
+                                        <p id="finallmessage"></p>
+                                    </div>
+                                    <button class="btn btn-orange addPizza">Add Pizza</button>
+                                    <button class="btn btn-orange" id="checkout">Checkout</button>
+                                    <button class="btn btn-orange deliver">Home delivery?</button>
+                                </div>
+                                <div class="delivery">
+                                    <form action="">
+                                        <div class="form-group">
+                                            <input type="text" id="name" class="form-control mb-3" placeholder="Name">
+                                            <input type="number" id="phone" class="form-control mb-3" placeholder="Phone Number">
+                                            <input type="text" id="location" class="form-control mb-3" placeholder="Location for delivery">
+                                            <button class="btn btn-orange" id="final-order">Place Order</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <br>
+    <div class="container-fluid" style="background-color:crimson" id="contact">
+        <div class="controls-top">
+            <h2 style="color: black;">Contact Us</h2>
+        </div>
+        <div class="row" id="contact-details">
+            <div class="col-md-4 text-justify">
+                <h2>Location</h2>
+                <p>360 Slice Pizza Place</p>
+                <p>Lavington|Nairobi</p>
+                <p>00452, Nairobi</p>
+            </div>
+            <div class="col-md-4">
+                <h2>Customer Care</h2>
+                <p>Telephone: 0201234567</p>
+                <p>Phone: 071234567</p>
+            </div>
+            <div class="col-md-4">
+                <div class="mapouter">
+                    <h2>Google-Maps</h2>
+                    <div class="gmap_canvas">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.3646083443!2d36.80127392001042!3d-1.268103232662234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f173c0a1f9de7%3A0xad2c84df1f7f2ec8!2sWestlands%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1615018294719!5m2!1sen!2ske"
+                            width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p class="font-weight-bold" style="text-decolaration-color:#ffffff;"><strong>&copy; 2020 Natasha Designs.All Rights Reserved.</strong></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+    <script src="js/mdb.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <!--Carousel Slider End-->
+    </section>
+    <!--Main home section end-->
+
+    <!--Footer-->
+
+
+
+
+
+
+
+</body>
+
+</html>
